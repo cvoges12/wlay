@@ -780,7 +780,7 @@ static void wlay_save_config_wlrrandr(struct wlay_state *wlay, FILE *f)
 static void wlay_save_config_kanshi(struct wlay_state *wlay, FILE *f)
 {
     struct wlay_head *head;
-    fprintf(f, "{\n");
+    fprintf(f, "profile {\n");
     wl_list_for_each(head, &wlay->wl.heads, link) {
         if (head->enabled) {
             fprintf(f, "\toutput %s mode %dx%d position %d,%d transform %s\n",
